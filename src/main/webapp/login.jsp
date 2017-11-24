@@ -36,7 +36,7 @@
 						<td align="left"><img
 							src="${pageContext.servletContext.contextPath }/admin_files/logo_left.png"
 							alt="Logo"></td>
-						<td align="center" style="font-weight: bold; color: gray;">登录－蓝缘管理系统</td>
+						<td align="center" style="font-weight: bold; color: gray;">登录</td>
 						<td align="right"><img
 							src="${pageContext.servletContext.contextPath }/admin_files/logo_left.png"
 							alt="Logo"></td>

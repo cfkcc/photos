@@ -238,7 +238,7 @@
 							</div>
 						</section>
 						<footer class="footer lt hidden-xs b-t b-dark">
-							<div id="chat" class="dropup">
+							<%-- <div id="chat" class="dropup">
 								<section class="dropdown-menu on aside-md m-l-n">
 									<section class="panel bg-white">
 										<header class="panel-heading b-b b-light">Active
@@ -256,7 +256,7 @@
 								<section class="dropdown-menu on aside-md m-l-n">
 									<section class="panel bg-white">
 										<header class="panel-heading b-b b-light">
-											John <i class="fa fa-circle text-success"></i>
+											${userFormMap.accountName}<i class="fa fa-circle text-success"></i>
 										</header>
 										<div class="panel-body animated fadeInRight">
 											<p class="text-sm">No contacts in your lists.</p>
@@ -267,7 +267,7 @@
 										</div>
 									</section>
 								</section>
-							</div>
+							</div> --%>
 							<a href="#nav" data-toggle="class:nav-xs"
 								class="pull-right btn btn-sm btn-dark btn-icon"> <i
 								class="fa fa-angle-left text"></i> <i
