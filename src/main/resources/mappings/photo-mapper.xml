@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.photo.mapper.PhotoMapper">
+	<!--mybatis ehcache缓存配置 -->
+	<!-- 以下两个<cache>标签二选一,第一个可以输出日志,第二个不输出日志 <cache type="org.mybatis.caches.ehcache.LoggingEhcache" 
+		/> -->
+	<!-- <cache type="org.mybatis.caches.ehcache.EhcacheCache"/> -->
+	<!-- 以下与实体类的中字段一致 -->
+	<sql id="selectId">
+		photo_id,
+		img_url,
+		group_id,
+		user_id,
+		create_user,
+		create_time,
+		update_user,
+		update_time,
+		is_hot,
+		status,
+		flag,
+		sort,
+		is_free,
+		coins,
+		discount,
+		app_id,
+		package_name
+
+	</sql>
+
+	<select id="findPhotoPage" resultType="com.photo.entity.PhotoFormMap">
+		select
+		<include refid="selectId" />
+		from photo
+		where 1 = 1
+		<if test="group_id != null and group_id != ''">
+			and group_id = #{group_id}
+		</if>
+		<if test="photo_id != null and photo_id != ''">
+			and photo_id = #{photo_id}
+		</if>
+		<if test="user_id != null and user_id != ''">
+			and user_id = #{user_id}
+		</if>
+		<if test="app_id != null and app_id != ''">
+			and app_id = #{app_id}
+		</if>
+		<if test="package_name != null and package_name != ''">
+			and package_name = #{package_name}
+		</if>
+		<if test="isHot != null">
+			and is_hot = #{isHot}
+		</if>
+		<if test="column != null">
+          order by ${column} ${sort}
+        </if>
+	</select>
+	
+</mapper>

@@ -84,7 +84,8 @@
 		</dependency>
 		<!-- mybatis -->
 		<dependency> <groupId>org.mybatis</groupId> <artifactId>mybatis</artifactId> 
-			<version>${mybatis.version}</version> </dependency>
+			<version>${mybatis.version}</version> 
+		</dependency>
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis-spring</artifactId>
@@ -247,7 +248,7 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>lanyuan-notebook-3.1v</finalName>
+		<finalName>photos</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.mortbay.jetty</groupId>
